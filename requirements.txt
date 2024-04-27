@@ -1,7 +1,7 @@
 asgiref
 defusedxml==0.7.1
 diff-match-patch==20230430
-Django==5.0.4
+Django
 django-admin-notification==0.2
 django-cors-headers==4.3.1
 django-import-export==3.3.8
