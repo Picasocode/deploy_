@@ -9,6 +9,9 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
+from dotenv import load_dotenv
+
+load_dotenv()
 
 from pathlib import Path
 import os
@@ -18,8 +21,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587  # Gmail SMTP port
-EMAIL_HOST_USER = 'vforvendatta5@gmail.com'  # Your Gmail email address
-EMAIL_HOST_PASSWORD = 'uakk amtj ixts baqw'  # Your Gmail password
+EMAIL_HOST_USER = 'cybertrixofficials@gmail.com'  # Your Gmail email address
+EMAIL_HOST_PASSWORD = os.getenv('PASS_ID')  # Your Gmail password
 EMAIL_USE_TLS = True 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
