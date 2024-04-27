@@ -159,12 +159,5 @@ JAZZMIN_UI_TWEAKS = {
 }
 
 JAZZMIN_SETTINGS = {
-
-"topmenu_links": [
-
-        # Url that gets reversed (Permissions can be added)
-     
-
-
-    ],
+"site_title": "Cybertrix",
 }
