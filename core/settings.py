@@ -160,7 +160,7 @@ JAZZMIN_UI_TWEAKS = {
 
 JAZZMIN_SETTINGS = {
 "site_title": "Cybertrix",
-"site_header": ""Cybertrix",
+"site_header": "Cybertrix",
 "site_brand": "Cybertrix",
 
 }
