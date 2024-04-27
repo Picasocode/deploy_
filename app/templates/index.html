@@ -1,0 +1,104 @@
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Sathyabama</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="static/img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="static/temp/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="static/temp/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="static/temp/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="static/temp/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar Start -->
+        <div class="container-fluid nav-bar bg-transparent">
+            <nav class="navbar navbar-expand-lg  navbar-light py-0 px-4" style=" background-color: rgba(255, 255, 255, .15);backdrop-filter: blur(5px); border-radius: 40px;">
+                <a href="index.html" class="navbar-brand d-flex align-items-center text-center">
+                    <div class="icon p-2 me-2">
+                        <img class="img-fluid" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAgCAMAAADZqYNOAAAA21BMVEVHcEwvN347U5U8UWUdHRwJCQoQEhovQYooM30PDg8TFBEcGBYHBwkUExMvV2AhiE4AAgAgiU84Z2oWjEgfiU0oKEkoKEknKEg5O4IiiE0Zi0ociUsWi0g5QYg+PYY9Q4shiE7QgGrgeVDLM4q6KYPONozBLIcZikoeiEwpMXzJNovWKo3LLorSLY7RLY0UjEfJY6A7PYKVpsZvfa51grWQoMPkljF3irOfrc4bRJUlSJDkljLmly3lljCYpcgxT5ciR5EZRJNGXqDlli/llTJ1gbl+iLx6hrzjlDEt1rbOAAAASXRSTlMAKrcSUJzERSK6ZDvgixo7/zIJt2K0q69cI5Z5qDQ+OUgIFU1BK3WJVVJhiom3ltGRaiY9hflLepbxxD8jYoqX1HDeNW670/BbEs1eCAAAAelJREFUeAFk0AWCozAAQNGfDVOqYQlUcCfU2/sfbiSwO/ZxHhp+J/5IfuW8TM1c97fOndnivdlytd58F+VJ4K9tyWLl+/oT/SDUILe73W6/PwBRnEimvDTGzbIM7awUOi8KGQXxhDpINQdhc8f1nDJIRgyDEg7YBFBRzCEJPIAyTYBD3bRti6Dqeqt+agCGdACOXQ0NbX/qOquY2AOSWFmVH9qfm8upy+b2mSVEccqH1qemaZifr7fT2ap3D8GzD+bAqX1XwelyHdU3iaYMjNXm8Tg9KlE1LRTjk2PJcC8V3/6ISU2s8JPE+6/C/dQwGIDEhMAR0AVkatKoTAd7TRlZFUI7jpTZqIMxERAl6fCuutAsF4sNZCqbEw3TQIepR/WcA5vZ+kWBPMwhNgpbZMBVgGPvReeKKNFMSSjEHFg5Eshz+G9vZZLFgcMwEEV/OGefFzLqwCQcman/iiKF4YlxMMsQt1ZR3cAqHj7IizL7XwHH3///kCCHv9+n4ZBQpTbGhmWyCsQPDmtrSgIc2COr6mbdNHV7OB6Ph7Y21jZdmcEzQL5HktRd19XrLpT1OswSBfYCETfwRf44TdM8jUUeVmKRuCOdJLzg+vc1Sykds2B2sg+yPiEi0YueBRG+oEUOS++lXxzjzhnQaDnwxJnG1QAAAABJRU5ErkJggg==" alt="Icon" style="width: 30px; height: 30px;">
+                    </div>
+                    <h1 class="m-0 text-primary">Sathyabama</h1>
+                </a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="/" class="nav-item nav-link active">Home</a>
+                        <a href="/events" class="nav-item nav-link">About</a>
+                    </div>
+                    <a href="/admin" class="btn btn-primary px-3 d-none d-lg-flex">Login</a>
+                </div>
+            </nav>
+        </div>
+        <!-- Navbar End -->
+
+
+        <!-- Header Start -->
+        <div class="container-fluid header bg-white p-0">
+            <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
+                <div class="col-md-6 p-5 mt-lg-5">
+                    <h1 class="display-5 animated fadeIn mb-4">Welcome to <span class="text-primary">Event</span> To Participate and Grows</h1>
+                    <p class="animated fadeIn mb-4 pb-2">"Entry is not important Exit is Important -Dr Jeppiar"</p>
+                    <a href="/events/" class="btn btn-primary py-3 px-5 me-3 animated fadeIn">Explore Events -> </a>
+                </div>
+                <div class="col-md-6 animated fadeIn">
+                    <div class="owl-carousel header-carousel">
+                        <div class="owl-carousel-item">
+                            <img class="img-fluid" style="height:41rem;" src="https://www.sathyabama.ac.in/sites/default/files/inline-images/DJI_0105-New-Low.jpg" alt="">
+                        </div>
+                        <div class="owl-carousel-item">
+                            <img class="img-fluid" style="height:41rem;" src="https://openthemagazine.com/wp-content/uploads/2024/02/Satyabhama.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Back to Top -->
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="static/temp/lib/wow/wow.min.js"></script>
+    <script src="static/temp/lib/easing/easing.min.js"></script>
+    <script src="static/temp/lib/waypoints/waypoints.min.js"></script>
+    <script src="static/temp/lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="static/temp/js/main.js"></script>
+</body>
+
+</html>

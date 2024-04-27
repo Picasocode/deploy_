@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congratulations!</title>
+    <style>
+        /* Define your CSS styles here */
+        .card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            transition: transform 0.3s ease;
+            width: 300px;
+            font-family: 'Roboto Mono', monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .card h2 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        .card p {
+            margin-bottom: 10px;
+            font-size: 1rem;
+            color: #000;
+            text-align: justify;
+        }
+        .card hr {
+            border: none;
+            border-top: 1px solid #ddd;
+            margin-bottom: 15px;
+        }
+        .card b {
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body style="font-family: 'Roboto Mono', monospace; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0;">
+<div class="card">
+    <h2>Congratulations!</h2>
+    <p>Mr/Ms {{ name }},</p>
+    <p>Congratulations on getting shortlisted and selected to be part of the Cybertrix Club. Looking forward to working with you in future events and club activities!</p>
+    <hr>
+    <p><b>Name:</b> {{ name }}</p>
+    <p><b>Register Number:</b> {{ reg }}</p>
+    <p><b>Team:</b> {{ year }}</p>
+    <div style="display: flex; justify-content: center;">
+        <img src="http://cybertrix.byethost12.com/logo-1.png" alt="Club Logo">
+    </div>
+</div>
+</body>
+</html>

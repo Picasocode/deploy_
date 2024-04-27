@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Scanner</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 flex flex-col justify-center items-center min-h-screen">
+
+    <h1 class="text-2xl sm:text-3xl font-bold text-blue-500 mb-4">QR Code Scanner</h1>
+
+    <div id="qr-video-container"></div>
+
+    <!-- Status message -->
+    <div id="status-message" class="status-message" data-status="{{ status }}"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.8/html5-qrcode.min.js" integrity="sha512-r6rDA7W6ZeQhvl8S7yRVQUKVHdexq+GAlNkNNqVC7YyIV+NwqCTJe2hDWCiffTyRNOeGEzRRJ9ifvRm/HCzGYg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        var html5QrcodeScanner;
+        var status = document.getElementById('status-message').getAttribute('data-status');
+
+        // Function to display status message
+        function displayStatusMessage(message, success) {
+            var statusMessageElement = document.getElementById('status-message');
+            statusMessageElement.innerText = message;
+            statusMessageElement.classList.remove('text-red-600', 'text-green-600');
+            if (success) {
+                statusMessageElement.classList.add('text-green-600');
+            } else {
+                statusMessageElement.classList.add('text-red-600');
+            }
+        }
+
+        function onScanSuccess(qrCodeMessage) {
+            if (status === 'in') {
+                displayStatusMessage('Already entered', false);
+                return;
+            }
+            
+            fetch('{% url "insert_qr_code" %}', { // Django template tag to get the URL
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRFToken': '{{ csrf_token }}'
+                    },
+                    body: JSON.stringify({
+                        data: qrCodeMessage
+                    })
+                })
+                .then(response => {
+                    if (response.ok) {
+                        displayStatusMessage(qrCodeMessage, true);
+                    } else {
+                        throw new Error('Network response was not ok');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    displayStatusMessage('Error occurred', false);
+                });
+        }
+
+        // Function to initialize QR code scanner
+        function initQRCodeScanner() {
+            html5QrcodeScanner = new Html5QrcodeScanner(
+                'qr-video-container', {
+                    fps: 10,
+                    qrbox: 250
+                }
+            );
+            html5QrcodeScanner.render(onScanSuccess);
+        }
+
+        // Start QR code scanning when the page loads
+        initQRCodeScanner();
+    </script>
+</body>
+
+ </html>

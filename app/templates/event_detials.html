@@ -1,0 +1,170 @@
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>{{event.Event_Name}}</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="https://www.sathyabama.ac.in/themes/custom/sathyabama/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{% static '/lib/animate/animate.min.css'%}" rel="stylesheet">
+    <link href="{% static '/lib/owlcarousel/assets/owl.carousel.min.css'%}" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{% static '/css/bootstrap.min.css'%}" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="{% static '/css/style.css' %}" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar Start -->
+        <div class="container-fluid nav-bar bg-transparent">
+            <nav class="navbar navbar-expand-lg navbar-light py-0 px-4" style=" background-color: rgba(255, 255, 255, .15);backdrop-filter: blur(5px); border-radius: 40px;">
+                <a href="{% url 'home' %}" class="navbar-brand d-flex align-items-center text-center">
+                    <div class="icon p-2 me-2">
+                        <img class="img-fluid" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAgCAMAAADZqYNOAAAA21BMVEVHcEwvN347U5U8UWUdHRwJCQoQEhovQYooM30PDg8TFBEcGBYHBwkUExMvV2AhiE4AAgAgiU84Z2oWjEgfiU0oKEkoKEknKEg5O4IiiE0Zi0ociUsWi0g5QYg+PYY9Q4shiE7QgGrgeVDLM4q6KYPONozBLIcZikoeiEwpMXzJNovWKo3LLorSLY7RLY0UjEfJY6A7PYKVpsZvfa51grWQoMPkljF3irOfrc4bRJUlSJDkljLmly3lljCYpcgxT5ciR5EZRJNGXqDlli/llTJ1gbl+iLx6hrzjlDEt1rbOAAAASXRSTlMAKrcSUJzERSK6ZDvgixo7/zIJt2K0q69cI5Z5qDQ+OUgIFU1BK3WJVVJhiom3ltGRaiY9hflLepbxxD8jYoqX1HDeNW670/BbEs1eCAAAAelJREFUeAFk0AWCozAAQNGfDVOqYQlUcCfU2/sfbiSwO/ZxHhp+J/5IfuW8TM1c97fOndnivdlytd58F+VJ4K9tyWLl+/oT/SDUILe73W6/PwBRnEimvDTGzbIM7awUOi8KGQXxhDpINQdhc8f1nDJIRgyDEg7YBFBRzCEJPIAyTYBD3bRti6Dqeqt+agCGdACOXQ0NbX/qOquY2AOSWFmVH9qfm8upy+b2mSVEccqH1qemaZifr7fT2ap3D8GzD+bAqX1XwelyHdU3iaYMjNXm8Tg9KlE1LRTjk2PJcC8V3/6ISU2s8JPE+6/C/dQwGIDEhMAR0AVkatKoTAd7TRlZFUI7jpTZqIMxERAl6fCuutAsF4sNZCqbEw3TQIepR/WcA5vZ+kWBPMwhNgpbZMBVgGPvReeKKNFMSSjEHFg5Eshz+G9vZZLFgcMwEEV/OGefFzLqwCQcman/iiKF4YlxMMsQt1ZR3cAqHj7IizL7XwHH3///kCCHv9+n4ZBQpTbGhmWyCsQPDmtrSgIc2COr6mbdNHV7OB6Ph7Y21jZdmcEzQL5HktRd19XrLpT1OswSBfYCETfwRf44TdM8jUUeVmKRuCOdJLzg+vc1Sykds2B2sg+yPiEi0YueBRG+oEUOS++lXxzjzhnQaDnwxJnG1QAAAABJRU5ErkJggg==" alt="Icon" style="width: 30px; height: 30px;">
+                    </div>
+                    <h1 class="m-0 text-primary">Sathyabama</h1>
+                </a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="{% url 'home' %}" class="nav-item nav-link">Home</a>
+                        <a href="/events" class="nav-item nav-link">About</a>
+                    </div>   
+                    
+                </div>
+            </nav>
+        </div>
+        <!-- Navbar End -->
+
+
+        <!-- Header Start -->
+        <div class="container-fluid header bg-white p-0">
+            <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
+                <div class="col-md-6 p-5 mt-lg-5">
+                    <h1 class="display-5 animated fadeIn mt-5 mb-4">{{event.Event_Name}}</h1> 
+                        <nav aria-label="breadcrumb animated fadeIn">
+                        <ol class="breadcrumb text-uppercase">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">Event</a></li>
+                            <li class="breadcrumb-item text-body active" aria-current="page">{{event.Event_Name}}</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="col-md-6 animated fadeIn">
+                    <img class="img-fluid" src="img/header.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                        <div class="about-img position-relative overflow-hidden p-5 pe-0">
+                            <img class="img-fluid w-75" src="{{ event.Broucher.url }}">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                        <h1 class="mb-4">{{event.Event_Name}}</h1>
+                        <p class="mb-4">{{ event.Event_Title }}</p>
+                        <p><i class="fa fa-calendar text-primary me-2"></i>{{ event.Event_Start_Date }}</p>
+                        <p><i class="fa fa-clock text-primary me-3"></i>{{ event.Event_Start_Time }} - {{ event.Event_End_Time }}</p>
+                        <p><i class="fa fa-map-marker-alt text-primary me-3"></i>{{ event.Event_Venue }}</p>
+                        <a class="btn btn-primary py-3 px-5 mt-3" href="{% url 'register_for_event' event.id %}">Register</a>
+                    </div>
+                </div>
+            </div>
+        </div>        
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                        <!-- Your existing code for event details -->
+                    </div>
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                        <!-- Your existing code for event details -->
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Updated table styling -->
+            <div class="table-responsive rounded">
+                <table class="table table-striped table-bordered table-rounded">
+                    <thead class="bg-primary text-white">
+                        <tr>
+                            <th>Name</th>
+                            <th>Title</th>
+                            <th>Year</th>
+                            <th>Department</th>
+                            <th>Email</th>
+                            <th>Section</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for user in registered_users %}
+                        <tr>
+                            <td>{{ user.Name }}</td>
+                            <td>{{ user.Register_No }}</td>
+                            <td>{{ user.year }}</td>
+                            <td>{{ user.Department }}</td>
+                            <td>{{ user.Email }}</td>
+                            <td>{{ user.Section }}</td>
+                            <td >{{user.status}}</td>
+                            
+
+                            <!-- Add other fields as needed -->
+                        </tr>
+                        {% empty %}
+                        <tr>
+                            <td colspan="6">No registered users for this event.</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static '/lib/wow/wow.min.js' %}"></script>
+    <script src="{% static '/lib/easing/easing.min.js' %}"></script>
+    <script src="{% static '/lib/waypoints/waypoints.min.js' %}"></script>
+    <script src="{% static '/lib/owlcarousel/owl.carousel.min.js'%}"></script>
+
+    <!-- Template Javascript -->
+    <script src="{% static '/js/main.js'%}"></script>
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration</title>
+    <!-- Import Poppins font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+        background: linear-gradient(to bottom right, #4CAF50, #45a049);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200vh;
+        font-family: 'Poppins', sans-serif;
+    }
+    .card {
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 15px;
+        width: 90%;
+        max-width: 400px;
+    }
+    .card-title {
+        margin-bottom: 15px;
+    }
+    .btn-register {
+        background-color: #4CAF50;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        width: 100%;
+    }
+    .btn-register:hover {
+        background-color: #45a049;
+    }
+    form {
+        margin-bottom: 10px;
+    }
+    form input[type="text"],
+    form input[type="Email"] {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        outline: none;
+        transition: border-color 0.3s; /* Add transition for smooth color change */
+    }
+    form input[type="text"]:focus,
+    form input[type="Email"]:focus {
+        border-color: #4CAF50; /* Change border color on focus */
+    }
+    form label {
+        font-weight: bold;
+        color: #333333;
+        margin-bottom: 3px;
+        display: block; /* Ensure labels are displayed as blocks */
+        transition: transform 0.3s; /* Add transition for smooth transform */
+    }
+    form input:focus + label,
+    form input:not(:placeholder-shown) + label {
+        transform: translateY(-20px); /* Move label up when input is focused or has value */
+        font-size: 12px; /* Optionally reduce font size */
+        color: #4CAF50; /* Optionally change color */
+    }
+    form select {
+        width: 100%;
+        padding: 10px;
+        background-color: #ffffff;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        outline: none;
+        transition: border-color 0.3s; /* Add transition for smooth color change */
+    }
+    
+    form select:focus {
+        border-color: #4CAF50; /* Change border color on focus */
+    }
+    
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2 class="card-title">Event Registration</h2>
+        <form method="post" action="{% url 'register_for_event' event.id %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-register">Register</button>
+        </form>
+    </div>
+</body>
+</html>
