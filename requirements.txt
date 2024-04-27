@@ -1,4 +1,4 @@
-dotenv
+python-dotenv
 asgiref
 gunicorn
 defusedxml==0.7.1
